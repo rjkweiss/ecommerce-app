@@ -5,7 +5,7 @@ export const GET = async () => {
         await dbConnect();
         return new Response(JSON.stringify({ message: 'Connected to MongoDB'}), { status: 200 });
     } catch (error) {
-        console.log(error);
+        console.log("error: ", error);
         return new Response(JSON.stringify({error: 'Database Connection failed'}), { status: 500 });
     }
 };
